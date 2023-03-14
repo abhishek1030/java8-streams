@@ -21,6 +21,7 @@ public class MainClass {
         listEmp.add(new Employee(10,3000,"G",21,"HR","M"));
         listEmp.add(new Employee(11,11000,"H",31,"Sales","M"));
         listEmp.add(new Employee(12,21000,"D",56,"HR","F"));
+        listEmp.add(new Employee(13,21000,"M",56,"HR","M"));
 
 
         List<Integer> listInt = new ArrayList<>();
