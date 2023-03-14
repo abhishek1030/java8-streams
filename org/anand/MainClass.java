@@ -8,20 +8,34 @@ import java.util.stream.IntStream;
 public class MainClass {
 
     public static void main(String[] args){
+    	Employee e1=new Employee(1,1000,"A",21,"Fin","M");
+    	Employee e2=new Employee(2,2000,"B",30,"Eng","F"));
+    	Employee e3=new Employee(3,2000,"C",20,"HR","F"));
+    	Employee e4=new Employee(4,4000,"D",25,"Fin","F"));
+    	Employee e5=new Employee(5,15000,"E",35,"RND","M"));
+    	Employee e6=new Employee(6,8000,"F",46,"Fin","M"));
+    	Employee e7=new Employee(7,21000,"G",24,"Sales","M"));
+    	Employee e8=new Employee(8,11000,"A",23,"RND","F"));
+    	Employee e9=new Employee(9,3000,"D",25,"Sales","F"));
+    	Employee e10=new Employee(10,3000,"G",21,"HR","M"));
+    	Employee e11=new Employee(11,11000,"H",31,"Sales","M"));
+    	Employee e12=new Employee(12,21000,"D",56,"HR","F"));
+    	Employee e13=new Employee(13,21000,"M",56,"HR","M"));
         List<Employee> listEmp = new ArrayList<>();
-        listEmp.add(new Employee(1,1000,"A",21,"Fin","M"));
-        listEmp.add(new Employee(2,2000,"B",30,"Eng","F"));
-        listEmp.add(new Employee(3,2000,"C",20,"HR","F"));
-        listEmp.add(new Employee(4,4000,"D",25,"Fin","F"));
-        listEmp.add(new Employee(5,15000,"E",35,"RND","M"));
-        listEmp.add(new Employee(6,8000,"F",46,"Fin","M"));
-        listEmp.add(new Employee(7,21000,"G",24,"Sales","M"));
-        listEmp.add(new Employee(8,11000,"A",23,"RND","F"));
-        listEmp.add(new Employee(9,3000,"D",25,"Sales","F"));
-        listEmp.add(new Employee(10,3000,"G",21,"HR","M"));
-        listEmp.add(new Employee(11,11000,"H",31,"Sales","M"));
-        listEmp.add(new Employee(12,21000,"D",56,"HR","F"));
-        listEmp.add(new Employee(13,21000,"M",56,"HR","M"));
+        listEmp.add(e1);
+        listEmp.add(e2);
+        listEmp.add(e3);
+        listEmp.add(e4);
+        listEmp.add(e5);
+        listEmp.add(e6);
+        listEmp.add(e7);
+        listEmp.add(e8);
+        listEmp.add(e9);
+        listEmp.add(e10);
+        listEmp.add(e11);
+        listEmp.add(e13);
+        listEmp.add(e13);
+        
 
 
         List<Integer> listInt = new ArrayList<>();
