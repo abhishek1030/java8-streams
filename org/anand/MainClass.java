@@ -9,18 +9,18 @@ public class MainClass {
 
     public static void main(String[] args){
     	Employee e1=new Employee(1,1000,"A",21,"Fin","M");
-    	Employee e2=new Employee(2,2000,"B",30,"Eng","F"));
-    	Employee e3=new Employee(3,2000,"C",20,"HR","F"));
-    	Employee e4=new Employee(4,4000,"D",25,"Fin","F"));
-    	Employee e5=new Employee(5,15000,"E",35,"RND","M"));
-    	Employee e6=new Employee(6,8000,"F",46,"Fin","M"));
-    	Employee e7=new Employee(7,21000,"G",24,"Sales","M"));
-    	Employee e8=new Employee(8,11000,"A",23,"RND","F"));
-    	Employee e9=new Employee(9,3000,"D",25,"Sales","F"));
-    	Employee e10=new Employee(10,3000,"G",21,"HR","M"));
-    	Employee e11=new Employee(11,11000,"H",31,"Sales","M"));
-    	Employee e12=new Employee(12,21000,"D",56,"HR","F"));
-    	Employee e13=new Employee(13,21000,"M",56,"HR","M"));
+    	Employee e2=new Employee(2,2000,"B",30,"Eng","F");
+    	Employee e3=new Employee(3,2000,"C",20,"HR","F");
+    	Employee e4=new Employee(4,4000,"D",25,"Fin","F");
+    	Employee e5=new Employee(5,15000,"E",35,"RND","M");
+    	Employee e6=new Employee(6,8000,"F",46,"Fin","M");
+    	Employee e7=new Employee(7,21000,"G",24,"Sales","M");
+    	Employee e8=new Employee(8,11000,"A",23,"RND","F");
+    	Employee e9=new Employee(9,3000,"D",25,"Sales","F");
+    	Employee e10=new Employee(10,3000,"G",21,"HR","M");
+    	Employee e11=new Employee(11,11000,"H",31,"Sales","M");
+    	Employee e12=new Employee(12,21000,"D",56,"HR","F");
+    	Employee e13=new Employee(13,21000,"M",56,"HR","M");
         List<Employee> listEmp = new ArrayList<>();
         listEmp.add(e1);
         listEmp.add(e2);
@@ -50,7 +50,7 @@ public class MainClass {
         listInt.add(5);
         listInt.add(22);
         listInt.add(6);
-        listInt.add(15);
+        listInt.add(16);
         listInt.add(4);
 
         String s = "The green lonely frog went up the hill and hill was passed over by a hilarious green lonely frog";
@@ -107,6 +107,13 @@ public class MainClass {
         //Check if a number n is prime or not
         /*int n = 19;
         System.out.println(n>1 && IntStream.range(2, (int) Math.sqrt(n)+1).noneMatch(x->n%x==0)); // here 2nd param in range is exclusive*/
+
+        //Find avg salary of male and female employees
+        //listEmp.stream().collect(Collectors.groupingBy(e->e.getGender())).entrySet().stream().forEach(k-> System.out.println(k.getKey()+","+k.getValue().stream().mapToDouble(Employee::getSalary).average().getAsDouble()));
+        //listEmp.stream().collect(Collectors.groupingBy(e->e.getGender(),Collectors.averagingDouble(a->a.getSalary()))).entrySet().stream().forEach(System.out::println);
+
+        //find if a number is perfect square or not
+        //listInt.stream().distinct().filter(n->IntStream.range(2,n/2+1).anyMatch(x->x*x==n)).forEach(System.out::println);
 
         //--------------------End of List-----------------------
         //--------------------Map------------------------
