@@ -53,6 +53,18 @@ public class MainClass {
         listInt.add(16);
         listInt.add(4);
 
+        List<Integer> listDup = new ArrayList<>();
+        listDup.add(1);
+        listDup.add(1);
+        listDup.add(1);
+        listDup.add(1);
+        listDup.add(2);
+        listDup.add(3);
+        listDup.add(3);
+        listDup.add(5);
+        listDup.add(6);
+        listDup.add(6);
+
         String s = "The green lonely frog went up the hill and hill was passed over by a hilarious green lonely frog";
         //--------------------List-----------------------
 
@@ -60,12 +72,13 @@ public class MainClass {
         //listInt.stream().collect(Collectors.groupingBy(a->a,Collectors.counting())).entrySet().stream().filter(e->e.getValue()>1).forEach(e-> System.out.println(e.getKey()));
         //listInt.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().stream().filter(e->e.getValue()>1).forEach(e-> System.out.println(e.getKey()));
 
-
         //Find third-highest (unique) salary
         /*int salary = listInt.stream().distinct().sorted(Collections.reverseOrder()).skip(2).findFirst().get();
-        System.out.println(salary);*/
-        /*int s = listEmp.stream().map(i->i.getSalary()).distinct().sorted(Collections.reverseOrder()).skip(2).findFirst().get();
-        System.out.println(s);*/
+        System.out.println(salary);
+        int ss = listEmp.stream().map(i->i.getSalary()).distinct().sorted(Collections.reverseOrder()).skip(2).findFirst().get();
+        System.out.println(ss);
+        int aa = listEmp.stream().sorted((a,b)->b.getSalary()-a.getSalary()).mapToInt(a->a.getSalary()).distinct().skip(2).findFirst().getAsInt();
+        System.out.println(aa);*/
 
         //First repetitive element ****
         /*int num = listInt.stream().collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new,Collectors.counting())).entrySet().stream().
@@ -96,7 +109,9 @@ public class MainClass {
 
         //Find maximum from an array of integers
         /*int max = listInt.stream().reduce(0,(a,b)->Math.max(a,b));
-        System.out.println(max);*/
+        System.out.println(max);
+        int max1 = listInt.stream().reduce((a,b)->Math.max(a,b)).get();
+        System.out.println(max1);*/
 
         //Print 9 random numbers
         //new Random().ints().limit(9).forEach(System.out::println);
@@ -115,6 +130,18 @@ public class MainClass {
         //find if a number is perfect square or not
         //listInt.stream().distinct().filter(n->IntStream.range(2,n/2+1).anyMatch(x->x*x==n)).forEach(System.out::println);
 
+        //Given arr[String], Change all the elements to uppercase and create a string joining them by ","
+        /*String str = Arrays.asList(s.split(" ")).stream().map(a->a.toUpperCase()).collect(Collectors.joining(", "));
+        System.out.println(str);*/
+
+
+        //Find duplicate elements
+        /*Set<Integer> set = listDup.stream().collect(Collectors.toSet());
+        Set<Integer> sett = new HashSet<>();
+        Set<Integer> uniqueSet = listDup.stream().filter(a->!sett.add(a)).collect(Collectors.toSet());//not solution
+        System.out.println(set);
+        System.out.println(uniqueSet);*/
+
         //--------------------End of List-----------------------
         //--------------------Map------------------------
 
@@ -122,5 +149,7 @@ public class MainClass {
 
         //--------------------End of Map------------------------
 
+        //Search in a map on the basis of value
+        //Sort an array
     }
 }
